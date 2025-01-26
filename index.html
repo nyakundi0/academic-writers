@@ -20,17 +20,31 @@
                 { 
                     id: 1, 
                     title: 'Basic Academic Writing', 
-                    duration: '2 weeks',
-                    price: 50,
+                    duration: '1 weeks',
+                    price: 1500,
                     certificateOffered: true
                 },
                 { 
                     id: 2, 
                     title: 'Advanced Research Techniques', 
-                    duration: '4 weeks',
-                    price: 100,
+                    duration: '2 weeks',
+                    price: 2000,
                     certificateOffered: true
-                }
+                },
+                { 
+                    id: 3, 
+                    title: 'photoshop', 
+                    duration: '1 weeks',
+                    price: 1500,
+                    certificateOffered: true
+                },
+                { 
+                    id: 4, 
+                    title: 'data science and Machine Learning(Basics in using colab,jupyter notebook and R studio', 
+                    duration: '1 weeks',
+                    price: 4000,
+                    certificateOffered: true
+                },
             ]);
 
             const handleAssignmentUpload = (file) => {
@@ -72,7 +86,7 @@
                                 }`}
                                 onClick={() => setUserType('student')}
                             >
-                                Assignment Uploader
+                                Assignment Uploader(student)
                             </button>
                             <button 
                                 className={`px-4 py-2 rounded ${
@@ -82,7 +96,7 @@
                                 }`}
                                 onClick={() => setUserType('helper')}
                             >
-                                Assignment Helper
+                                Assignment Helper(Tutor)
                             </button>
                         </div>
                     </div>
@@ -119,7 +133,7 @@
                                     <div key={module.id} className="border rounded p-4">
                                         <h3 className="font-semibold text-lg mb-2">{module.title}</h3>
                                         <p className="text-gray-600">Duration: {module.duration}</p>
-                                        <p className="text-gray-600 mb-3">Price: ${module.price}</p>
+                                        <p className="text-gray-600 mb-3">Price: Ksh{module.price}</p>
                                         <button 
                                             className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition"
                                             onClick={() => enrollInTraining(module.id)}
